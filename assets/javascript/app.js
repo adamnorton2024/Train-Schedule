@@ -51,22 +51,22 @@ $("#add-train-btn").on("click", function (event) {
     var test;
 // 3. Create Firebase event for adding train
 database.ref('train').on("child_added", function (childSnapshot) {
-    console.log(childSnapshot.val());
+    //console.log(childSnapshot.val());
     test = childSnapshot.val();
 
     // Store everything into a variable.
     var trainName = childSnapshot.val().name;
     var trainDestination = childSnapshot.val().destination;
-    var firstTrainTime = childSnapshot.val().firstTime;
+    var firstTrainTime = moment.unix(childSnapshot.val().firstTime).format("HH.mm");
     var frequency = childSnapshot.val().frequency;
     var trainTimeLeft = childSnapshot.val().timeLeft;
 
     // Train Info
-    console.log(trainName);
-    console.log(trainDestination);
-    console.log(firstTrainTime);
-    console.log(frequency);
-    console.log(trainTimeLeft);
+    // console.log(trainName);
+    // console.log(trainDestination);
+    // console.log(firstTrainTime);
+    // console.log(frequency);
+    // console.log(trainTimeLeft);
 
     // First Time (pushed back 1 year to make sure it comes before current time)
     var firstTimeConverted = moment(firstTrainTime, "HH:mm").subtract(1, "years");

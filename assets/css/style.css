@@ -1,0 +1,31 @@
+.jumbotron {
+    background-image: url(/assets/images/bg_subway.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    text-shadow: 2px 2px #000;
+}
+
+body {
+    background-color: #68747D;
+}
+
+.color-accent {
+    background-color: #8D3F2B;
+}
+
+.card {
+    border: 2px solid #AA8030;
+}
+
+.btn {
+    background-color: #8D3F2B;
+    border: 2px solid #AA8030;
+}
+
+.btn:hover {
+    background-color: #AA8030;
+    border: 2px solid #8D3F2B;
+}
+
+
