@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Schedule - Firebase</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Moment JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+</head>
+<body>
+
+
+    <div class="jumbotron jumbotron-fluid bg-dark text-white">
+        <div class="container">
+            <h1 class="display-4">Current Train Schedule</h1>
+            <p class="lead">Make some cool train scheduel stuff below!</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card mb-3 pb=0 bg-dark">
+            <div class="card-header bg-dark text-white">
+                Train Schedule
+            </div>
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency (min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Orient Express</th>
+                        <td>London</td>
+                        <td>65</td>
+                        <td>05:35pm</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card bg-dark">
+            <div class="card-header bg-dark text-white">
+                Add Train
+            </div>
+            <form class="bg-dark text-white p-3">
+                <div class="form-group">
+                    <label for="InputTrainName">Train Name</label>
+                    <input type="text" class="form-control" id="InputTrainName" aria-describedby="nameHelp"
+                        placeholder="Enter Train Name">
+                </div>
+                <div class="form-group">
+                    <label for="InputDestination">Destination</label>
+                    <input type="text" class="form-control" id="InputDestination" aria-describedby="destinationHelp"
+                        placeholder="Enter Destination">
+                </div>
+                <div class="form-group">
+                    <label for="InputFirstTrainTime">First Train Time (HH:mm - military time)</label>
+                    <input type="text" class="form-control" id="InputFirstTrainTime" aria-describedby="trainTimenHelp"
+                        placeholder="Enter First Train Time">
+                </div>
+                <div class="form-group">
+                    <label for="InputFrequency">Frequency (min)</label>
+                    <input type="text" class="form-control" id="InputFrequency" aria-describedby="frequencyHelp"
+                        placeholder="Enter Frequency">
+                </div>
+                <button type="submit" class="btn btn-primary" id="add-train-button">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./assets/javascript/app.js"></script>
+</body>
+</html>
