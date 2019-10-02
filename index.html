@@ -8,6 +8,11 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
     <!--Moment JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </head>
@@ -36,28 +41,8 @@
                         <th scope="col">Minutes Away</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Orient Express</th>
-                        <td>London</td>
-                        <td>65</td>
-                        <td>05:35pm</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                    </tr>
+                <tbody id='train-table'>
+                    
                 </tbody>
             </table>
         </div>
@@ -70,26 +55,26 @@
             </div>
             <form class="bg-dark text-white p-3">
                 <div class="form-group">
-                    <label for="InputTrainName">Train Name</label>
-                    <input type="text" class="form-control" id="InputTrainName" aria-describedby="nameHelp"
+                    <label for="input-train-name">Train Name</label>
+                    <input type="text" class="form-control" id="input-train-name" aria-describedby="nameHelp"
                         placeholder="Enter Train Name">
                 </div>
                 <div class="form-group">
-                    <label for="InputDestination">Destination</label>
-                    <input type="text" class="form-control" id="InputDestination" aria-describedby="destinationHelp"
+                    <label for="input-destination">Destination</label>
+                    <input type="text" class="form-control" id="input-destination" aria-describedby="destinationHelp"
                         placeholder="Enter Destination">
                 </div>
                 <div class="form-group">
-                    <label for="InputFirstTrainTime">First Train Time (HH:mm - military time)</label>
-                    <input type="text" class="form-control" id="InputFirstTrainTime" aria-describedby="trainTimenHelp"
+                    <label for="input-first-train-time">First Train Time (HH:mm - military time)</label>
+                    <input type="text" class="form-control" id="input-first-train-time" aria-describedby="trainTimenHelp"
                         placeholder="Enter First Train Time">
                 </div>
                 <div class="form-group">
-                    <label for="InputFrequency">Frequency (min)</label>
-                    <input type="text" class="form-control" id="InputFrequency" aria-describedby="frequencyHelp"
+                    <label for="input-frequency">Frequency (min)</label>
+                    <input type="text" class="form-control" id="input-frequency" aria-describedby="frequencyHelp"
                         placeholder="Enter Frequency">
                 </div>
-                <button type="submit" class="btn btn-primary" id="add-train-button">Submit</button>
+                <button type="submit" class="btn btn-primary" id="add-train-btn">Add Train</button>
             </form>
         </div>
     </div>
