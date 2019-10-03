@@ -4,10 +4,11 @@
     background-repeat: no-repeat;
     background-position: bottom right;
     text-shadow: 2px 2px #000;
+    border-bottom: 2px solid #AA8030;
 }
 
 body {
-    background-color: #68747D;
+    background-color: rgb(67, 78, 87);
 }
 
 .color-accent {
